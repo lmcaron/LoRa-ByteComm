@@ -1,4 +1,4 @@
-//*****Reception de donnée byte via LORA*****
+//*****Reception de donnée byte via LoRa*****
 
 #include <SPI.h>
 #include <LoRa.h>
@@ -34,8 +34,7 @@ void loop() {
       input = LoRa.read();
       Serial.print(input);
     }
-
-   
+    
     // print RSSI of packet
     Serial.print(" with RSSI ");
     Serial.println(LoRa.packetRssi());
