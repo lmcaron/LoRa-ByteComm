@@ -23,11 +23,10 @@ void setup() {
 }
 
 void loop() {
-  
   data = map(analogRead(A0),0,1023,0,255);
   Serial.print("Sending packet: ");
   Serial.println(data);
-
+  
   // send packet
   LoRa.beginPacket();
   LoRa.write(data);
